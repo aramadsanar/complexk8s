@@ -57,7 +57,7 @@ jobs:
 
       - name: Apply
         run: |-
-          kubect apply -f k8s
+          kubectl apply -f k8s
 
           kubectl set image deployments/client-deployment client=vmun1x/multi-client:${{env.SHA}} 
           kubectl set image deployments/server-deployment server=vmun1x/multi-server:${{env.SHA}} 
